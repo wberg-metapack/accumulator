@@ -1,7 +1,8 @@
-package nu.mine.wberg.metapack;
+package nu.mine.wberg.metapack.accumulator;
 
 import static org.junit.Assert.assertEquals;
 
+import nu.mine.wberg.metapack.accumulator.AccumulatorImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

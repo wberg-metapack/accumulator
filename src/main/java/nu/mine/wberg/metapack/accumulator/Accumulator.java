@@ -1,4 +1,4 @@
-package nu.mine.wberg.metapack;
+package nu.mine.wberg.metapack.accumulator;
 
 /**
  * <p>Accumulates one or more variables together and maintains a running {@code int} sum of the

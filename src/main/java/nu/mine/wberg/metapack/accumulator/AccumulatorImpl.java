@@ -1,4 +1,4 @@
-package nu.mine.wberg.metapack;
+package nu.mine.wberg.metapack.accumulator;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
