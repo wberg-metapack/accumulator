@@ -7,6 +7,18 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
+/**
+ * The test name format (action_expectedResult) is completely non-standard
+ * but I have yet to discover a more readable way of describing test activity.
+ * On the whole I tend to copy local naming conventions, so I rarely use this
+ * format in practice.
+ *
+ * There are no tests here which test thread safety, because thread safety is
+ * hard to test deterministically (i.e. non-threadsafe code sometimes appears
+ * threadsafe). The best way to manage potentially unsafe concurrent code is
+ * to minimise its concurrent aspect into an untested delegator which assigns
+ * single-threaded code.
+ */
 @RunWith(JUnit4.class)
 public class AccumulatorImplTest {
 
@@ -26,6 +38,11 @@ public class AccumulatorImplTest {
     public void accumulateOne_accumulates() {
         accumulatorImpl.accumulate(1);
         assertEquals(1, accumulatorImpl.getTotal());
+    }
+
+    @Test
+    public void accumulateOne_returnsOne() {
+        assertEquals(1, accumulatorImpl.accumulate(1));
     }
 
     @Test
